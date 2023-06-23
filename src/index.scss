@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("fonts"),
+    url(./assets//fonts/ProximaNova-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: local("fonts"), url(./assets//fonts/ProximaNova-Bold.woff) format("woff");
+}
+body {
+  margin: 0;
+  font-family: "Proxima Nova";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  a {
+    text-decoration: none;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
