@@ -1,10 +1,23 @@
-import React, { FC } from "react";
+import React from "react";
+import "./index.scss";
 import HomeHeader from "./homeHeader/HomeHeader";
+import logoBg from "../../assets/images/logo-bg.svg";
+import TextAndImage from "../../components/textAndImage/TextAndImage";
+import { getTextAndImageItems } from "./home.helper";
 
-const HomePage: FC = () => {
+const HomePage: React.FC = () => {
   return (
-    <div>
+    <div className="home-page">
       <HomeHeader />
+      <div className="container main">
+        <div className="logo-bg">
+          <img src={logoBg} alt="logo" />
+        </div>
+        <div className="home-body-title">
+          <h2>Ландшафтный дизайн — простые решения от GardenPark</h2>
+        </div>
+        <TextAndImage items={getTextAndImageItems()} />
+      </div>
     </div>
   );
 };

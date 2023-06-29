@@ -329,9 +329,9 @@ main {
       width: calc(var(--selector-width) * 1%);
       height: calc(var(--selector-width) * 1%);
       border-radius: 1e5px;
-    //   box-shadow: var(--shadow),
-    //     0 calc(var(--radius) / -10) 120px calc(var(--radius) / 5)
-    //       rgb(0, 0, 0 / 0.05);
+      //   box-shadow: var(--shadow),
+      //     0 calc(var(--radius) / -10) 120px calc(var(--radius) / 5)
+      //       rgb(0, 0, 0 / 0.05);
       background: var(--inner-bg);
     }
 
@@ -359,10 +359,6 @@ main {
     }
 
     & li {
-      & > span {
-        // display: none;
-      }
-
       & > input[type="radio"] {
         all: unset;
         position: absolute;

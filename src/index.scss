@@ -22,3 +22,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container {
+  width: 100%;
+  padding-right: 36px;
+  padding-left: 36px;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and(max-width: 1170px) {
+    max-width: 1100px;
+  }
+}
