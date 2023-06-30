@@ -1,0 +1,47 @@
+.sidebar-container {
+  display: flex;
+  width: 80px;
+  height: 100vh;
+  background: #fff;
+  position: sticky;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 1;
+  background-color: red;
+  opacity: 0;
+  &.animation {
+    opacity: 1;
+    animation-duration: 1s;
+    animation-name: moveToLeft;
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
