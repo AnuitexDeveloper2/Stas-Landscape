@@ -2,8 +2,8 @@
   display: flex;
   width: 80px;
   height: 100vh;
-  background: #fff;
-  position: sticky;
+  background: #f8f8f8;
+  position: fixed;
   right: 0;
   top: 0;
   margin-left: auto;
@@ -12,13 +12,16 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  z-index: 1;
-  background-color: red;
+  z-index: 20;
   opacity: 0;
-  &.animation {
+  &.visible {
     opacity: 1;
     animation-duration: 1s;
     animation-name: moveToLeft;
+  }
+  &.hide {
+    animation-duration: 1s;
+    animation-name: moveToRight;
   }
 }
 
@@ -36,12 +39,12 @@
 
 @keyframes moveToRight {
   0% {
-    transform: translateX(-120px);
-    opacity: 0;
+    transform: translateX(0);
+    opacity: 1;
   }
 
   100% {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(120px);
+    opacity: 0;
   }
 }

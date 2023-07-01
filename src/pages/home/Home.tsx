@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.scss";
 import HomeHeader from "./homeHeader/HomeHeader";
 import logoBg from "../../assets/images/logo-bg.svg";
@@ -7,6 +7,8 @@ import { getTextAndImageItems } from "./home.helper";
 import Sidebar from "../../components/sidebar/Sidebar";
 
 const HomePage: React.FC = () => {
+  
+
   return (
     <div className="home-page">
       <HomeHeader />
