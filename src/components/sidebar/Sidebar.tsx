@@ -1,24 +1,25 @@
 import React, { useEffect } from "react";
 import "./index.scss";
+import tel from "../../assets/images/tel.svg";
+import insta from "../../assets/images/instagram.svg";
+import { NavLink } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
-  // useEffect(() => {
-  //   const element = document.getElementById("sidebar");
-  //   if (element) {
-  //     const observer = new IntersectionObserver(
-  //       function (entries: any) {
-  //         if (entries[0].isIntersecting === true) {
-  //           element.classList.add("animation");
-  //         }
-  //       },
-  //       { threshold: [0] }
-  //     );
-  //     observer.observe(element);
-  //   }
-  // }, []);
   return (
     <div className="sidebar-container" id="sidebar">
-      Hello
+      <div className="sidebar-content">
+        <a href="tel:+380971867569">
+          <img src={tel} alt="telephone" width={30} />
+        </a>
+        <NavLink to={"/"} className="make-order-link">
+          зробити заказ
+        </NavLink>
+        <div>
+          <a href="">
+            <img src={insta} alt="instagram" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(
+const root = ReactDOM.crea(
   document.getElementById("root") as HTMLElement
 );
 root.render(

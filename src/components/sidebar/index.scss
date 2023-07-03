@@ -25,6 +25,30 @@
   }
 }
 
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  .make-order-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #24211f;
+    cursor: pointer;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    &:hover {
+      color: #69ac38;
+    }
+  }
+}
+
 @keyframes moveToLeft {
   0% {
     transform: translateX(120px);
