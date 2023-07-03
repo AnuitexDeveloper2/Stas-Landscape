@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
-import Header from "../components/header";
-import { sentEmail } from "../helper/email";
+// import { sentEmail } from "../helper/email";
 const Contacts: FC = () => {
   const [successSubmit, setSuccessSubmit] = useState(false);
   const [error, setError] = useState(false);
@@ -26,13 +25,13 @@ const Contacts: FC = () => {
       setError(true);
       return;
     }
-    sentEmail(
-      state.name,
-      state.phone,
-      state.email,
-      state.comments,
-      state.location
-    );
+    // sentEmail(
+    //   state.name,
+    //   state.phone,
+    //   state.email,
+    //   state.comments,
+    //   state.location
+    // );
     setSuccessSubmit(true);
   };
 
