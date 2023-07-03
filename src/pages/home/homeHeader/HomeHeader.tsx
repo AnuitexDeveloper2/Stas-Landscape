@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./index.scss";
-import logo from "../../../assets/images/garden-park-main-screen.svg";
+import logo from "../../../assets/images/logo.jpg";
 import phone from "../../../assets/images/phone.svg";
 import DialButton from "../dialButton/DialButton";
 const HomeHeader: React.FC = () => {
@@ -31,14 +31,14 @@ const HomeHeader: React.FC = () => {
           <div className="home-header-short-info">
             <div className="short-info-item">
               <NavLink to="/">
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo" className="logo"/>
               </NavLink>
             </div>
             <div className="short-info-item">
-              <a href="tel:+380971867569" className="phone-section">
+              <a href="tel:+380660175450" className="phone-section">
                 <div className="phone-section">
                   <img src={phone} alt="" />
-                  <div>+380971867569</div>
+                  <div>+380660175450</div>
                 </div>
               </a>
             </div>

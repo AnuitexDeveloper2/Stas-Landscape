@@ -1,4 +1,5 @@
 .home-header-container {
+  --scene-bg: #fcfaed;
   height: 100vh;
   background-color: #24211f;
   background-image: url(//gardenpark.com.ua/wp-content/themes/gardenpark/css/../img/start-video.jpg);
@@ -20,23 +21,26 @@
   justify-content: space-between;
   z-index: 30;
   .home-header-short-info-section {
-    padding-top: 56px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background: var(--scene-bg);
     .home-header-short-info {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
       width: 100%;
       .short-info-item {
         font-family: "Proxima Nova";
         padding: 0 40px;
+        .logo {
+          width: 100px;
+        }
         .phone-section {
           font-size: 21px;
           font-weight: 400;
           line-height: 26px;
-          color: #ffffff;
+          color: #00273B;
           display: flex;
         }
       }

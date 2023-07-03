@@ -8,7 +8,7 @@ const Sidebar: React.FC = () => {
   return (
     <div className="sidebar-container" id="sidebar">
       <div className="sidebar-content">
-        <a href="tel:+380971867569">
+        <a href="tel:+380660175450">
           <img src={tel} alt="telephone" width={30} />
         </a>
         <NavLink to={"/"} className="make-order-link">
