@@ -49,6 +49,11 @@
   }
 }
 
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+
 @keyframes moveToLeft {
   0% {
     transform: translateX(120px);

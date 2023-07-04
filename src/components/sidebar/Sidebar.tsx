@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./index.scss";
 import tel from "../../assets/images/tel.svg";
+import tikTok from "../../assets/images/tiktok.svg";
 import insta from "../../assets/images/instagram.svg";
 import { NavLink } from "react-router-dom";
 
@@ -14,9 +15,12 @@ const Sidebar: React.FC = () => {
         <NavLink to={"/"} className="make-order-link">
           зробити заказ
         </NavLink>
-        <div>
-          <a href="">
+        <div className="socials">
+          <a href="https://instagram.com/frankiedesing13?igshid=Y2IzZGU1MTFhOQ==" target='_blank'>
             <img src={insta} alt="instagram" />
+          </a>
+          <a href="https://instagram.com/frankiedesing13?igshid=Y2IzZGU1MTFhOQ==" target='_blank'>
+            <img src={tikTok} alt="instagram" />
           </a>
         </div>
       </div>

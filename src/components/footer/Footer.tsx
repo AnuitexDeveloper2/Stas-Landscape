@@ -1,10 +1,11 @@
 import React from "react";
-import "./index.scss";
+import { FooterContainer } from "./Footer.stsyles";
+import "./Footer.stsyles.ts";
 
 const Footer: React.FC = () => (
-  <div className="footer-container">
+  <FooterContainer>
     © 2023 | The Frankie Design™ | All rights reserved
-  </div>
+  </FooterContainer>
 );
 
 export default Footer;

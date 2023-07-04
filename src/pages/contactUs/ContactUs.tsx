@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import './index.scss'
 // import { sentEmail } from "../helper/email";
 const Contacts: FC = () => {
   const [successSubmit, setSuccessSubmit] = useState(false);

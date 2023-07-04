@@ -149,7 +149,7 @@ main {
   grid-template-columns: repeat(var(--col-num), 1fr);
 
   // theme
-  --scene-bg: #fcfaed;
+  --scene-bg: #fcf8ec;
 
   & [data-theme="dark"] {
     --scene-bg: hsl(207deg 20% 12%);

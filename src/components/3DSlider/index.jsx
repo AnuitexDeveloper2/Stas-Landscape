@@ -18,7 +18,6 @@ const data = [
   { key: 4, url: Four },
   { key: 5, url: Five },
   { key: 6, url: Six },
-  { key: 7, url: Seven },
   { key: 8, url: Eight },
   { key: 9, url: Nine }
 ];

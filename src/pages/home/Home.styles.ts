@@ -1,4 +1,6 @@
-.home-page {
+import styled from "styled-components";
+
+export const HomePageContainer = styled('div')`
   .logo-bg {
     position: fixed;
     right: 0;
@@ -22,8 +24,6 @@
       margin: 0;
     }
   }
-}
-
 .our-works-section {
   padding-bottom: 200px;
   h2 {
@@ -34,3 +34,4 @@
     margin: 0;
   }
 }
+`

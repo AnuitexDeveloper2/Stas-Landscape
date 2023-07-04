@@ -1,5 +1,7 @@
-.home-header-container {
-  --scene-bg: #fcfaed;
+import styled from 'styled-components'
+import { mainBackground } from '../../../common/colors'
+
+export const HomeHeaderContainer = styled('div')`
   height: 100vh;
   background-color: #24211f;
   background-image: url(//gardenpark.com.ua/wp-content/themes/gardenpark/css/../img/start-video.jpg);
@@ -24,7 +26,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: var(--scene-bg);
+    background: ${mainBackground};
     .home-header-short-info {
       display: flex;
       align-items: center;
@@ -71,4 +73,4 @@
       justify-content: flex-end;
     }
   }
-}
+  `
