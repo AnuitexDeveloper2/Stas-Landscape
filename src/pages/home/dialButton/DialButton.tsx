@@ -16,7 +16,7 @@ const DialButton: React.FC = () => {
     setState({ ...state, isKnobActive: !state.isKnobActive });
   };
   return (
-    <main>
+    <main className="dial-button-container">
       <div>
         <div className={`selector ${state.isKnobActive ? "active" : ""}`}>
           <div className="knob" onClick={handleClick}></div>

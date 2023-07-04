@@ -23,6 +23,9 @@
     animation-duration: 1s;
     animation-name: moveToRight;
   }
+  @media screen and(max-width: 800px) {
+    display: none;
+  }
 }
 
 .sidebar-content {

@@ -12,6 +12,9 @@
   justify-content: center;
   overflow: hidden;
   gap: 10px;
+  @media screen and(max-width: 800px) {
+    padding-bottom: 80px;
+  }
   &.reverse {
     flex-direction: row-reverse;
     .info-col {
@@ -23,6 +26,9 @@
         background-color: #24211f;
         margin-top: 12px;
         margin-right: 52px;
+        @media screen and(max-width: 800px) {
+          content: none;
+        }
       }
       &::after {
         content: none;
@@ -32,6 +38,9 @@
   .info-col {
     display: flex;
     justify-content: right;
+    @media screen and(max-width: 800px) {
+      justify-content: left;
+    }
     &:after {
       content: "";
       max-width: 72px;
@@ -40,9 +49,16 @@
       background-color: #24211f;
       margin-top: 12px;
       margin-left: 52px;
+      @media screen and(max-width: 8000px) {
+       content: unset;
+      }
     }
     @media screen and(max-width: 1200px) {
       max-width: 407px;
+    }
+    @media screen and(max-width: 8000px) {
+      max-width: unset;
+      width: 100%;
     }
     width: 50%;
     .info-text {
@@ -84,10 +100,17 @@
       }
     }
     width: 50%;
+    @media screen and(max-width: 800px) {
+      width: 100%;
+    }
     img {
       max-width: 100%;
       height: auto;
     }
+  }
+
+  @media screen and(max-width: 800px) {
+    display: block;
   }
 }
 

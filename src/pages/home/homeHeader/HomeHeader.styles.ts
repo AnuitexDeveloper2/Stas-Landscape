@@ -71,6 +71,9 @@ export const HomeHeaderContainer = styled('div')`
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end;
+      @media (max-width: 800px) {
+        height: 0;
+    }
     }
   }
   `
