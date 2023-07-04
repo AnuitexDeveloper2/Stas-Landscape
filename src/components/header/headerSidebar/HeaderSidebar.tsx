@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HeaderSidebarContainer } from './HeaderSidebar.styles';
+import { HeaderSidebarContainer, SidebarMenu } from './HeaderSidebar.styles';
 
 const HeaderSidebar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +13,7 @@ const HeaderSidebar: React.FC = () => {
                     <span></span>
                 </button>
             </div>
+            <SidebarMenu className={`${isOpen ? 'hide' : ''}`}>Sidebar</SidebarMenu>
         </HeaderSidebarContainer>
     );
 };

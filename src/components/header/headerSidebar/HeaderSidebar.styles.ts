@@ -131,3 +131,5 @@ export const HeaderSidebarContainer = styled('div')`
         }
     }
 `;
+
+export const SidebarMenu = styled('div')``

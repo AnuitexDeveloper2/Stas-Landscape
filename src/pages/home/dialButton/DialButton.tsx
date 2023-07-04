@@ -22,27 +22,27 @@ const DialButton: React.FC = () => {
                     <div className="knob" onClick={handleClick}></div>
                     <ul>
                         <li>
-                            <span>Услуги</span>
+                            <span>Головна</span>
                             <input type="radio" name="'choice'-a" checked />
                         </li>
                         <li>
-                            <span>Продукция</span>
+                            <span>Послуги</span>
                             <input type="radio" name="'choice'-a" />
                         </li>
                         <li>
-                            <span>Компания</span>
+                            <span className="hide">Наші роботи</span>
                             <input type="radio" name="'choice'-a" />
                         </li>
                         <li>
-                            <span>Star</span>
+                            <span className="contact">Зв'язатися з нами</span>
                             <input type="radio" name="'choice'-a" />
                         </li>
                         <li>
-                            <span>More</span>
+                            <span className="hide">More</span>
                             <input type="radio" name="'choice'-a" />
                         </li>
                         <li>
-                            <span>Refresh</span>
+                            <span>Наші роботи</span>
                             <input type="radio" name="'choice'-a" />
                         </li>
                     </ul>
