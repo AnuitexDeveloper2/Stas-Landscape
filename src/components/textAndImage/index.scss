@@ -1,0 +1,139 @@
+.info {
+  padding-bottom: 180px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 10px;
+  @media screen and(max-width: 800px) {
+    padding-bottom: 80px;
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+    .info-col {
+      justify-content: left;
+      &:before {
+        content: "";
+        min-width: 72px;
+        height: 1px;
+        background-color: #24211f;
+        margin-top: 12px;
+        margin-right: 52px;
+        @media screen and(max-width: 800px) {
+          content: none;
+        }
+      }
+      &::after {
+        content: none;
+      }
+    }
+  }
+  .info-col {
+    display: flex;
+    justify-content: right;
+    @media screen and(max-width: 800px) {
+      justify-content: left;
+    }
+    &:after {
+      content: "";
+      max-width: 72px;
+      width: 100%;
+      height: 1px;
+      background-color: #24211f;
+      margin-top: 12px;
+      margin-left: 52px;
+      @media screen and(max-width: 8000px) {
+       content: unset;
+      }
+    }
+    @media screen and(max-width: 1200px) {
+      max-width: 407px;
+    }
+    @media screen and(max-width: 8000px) {
+      max-width: unset;
+      width: 100%;
+    }
+    width: 50%;
+    .info-text {
+      max-width: 424px;
+      width: 100%;
+      a {
+        text-decoration: none;
+        color: inherit;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+      h3 {
+        font-family: "Proxima Nova";
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+        position: relative;
+      }
+      .text {
+        p {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  .info-image {
+    opacity: 0;
+    &.animation {
+      opacity: 1;
+      &.right {
+        animation-duration: 2s;
+        animation-name: moveToLeft;
+      }
+      &.left {
+        animation-duration: 2s;
+        animation-name: hideToRight;
+      }
+    }
+    width: 50%;
+    @media screen and(max-width: 800px) {
+      width: 100%;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and(max-width: 800px) {
+    display: block;
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hideToRight {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
