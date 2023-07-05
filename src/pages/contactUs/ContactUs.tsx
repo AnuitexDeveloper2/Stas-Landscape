@@ -1,5 +1,8 @@
 import { FC, useState } from 'react';
-import './index.scss';
+import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header';
+import DialButton from '../home/dialButton/DialButton';
+import { ContactsWrapper } from './ContactUs.styles';
 // import { sentEmail } from "../helper/email";
 const Contacts: FC = () => {
     const [successSubmit, setSuccessSubmit] = useState(false);
@@ -36,21 +39,22 @@ const Contacts: FC = () => {
 
     return (
         <>
-            <div className="contacts-wrapper">
+            <Header />
+            <ContactsWrapper>
                 <div className="contact-container">
-                    <h1 className="title">Свяжитесь с нами</h1>
+                    <h1 className="title">Зв'яжіться з нами</h1>
                     <div className="description">
-                        На все запросы будет дан ответ, наши рекомендации бесплатны и ни к чему не
-                        обязывают.
+                        На всі запити буде надано відповідь, наші рекомендації безкоштовні і ні до
+                        чого не зобов'язують.
                     </div>
                     <div className="information">
                         <div className="information-inner">
                             <div className="title">телефон:</div>
                             <div className="description">
                                 {' '}
-                                <a href="tel:+380971867569">096 2530 374</a>
+                                <a href="tel:+380660175450">066 01 75 450</a>
                             </div>
-                            <div className="title">email:</div>
+                            <div className="title">Електронна пошта:</div>
                             <div className="description">
                                 <a
                                     className="phone-section"
@@ -65,11 +69,15 @@ const Contacts: FC = () => {
                     </div>
                 </div>
                 {successSubmit ? (
-                    <div className="success-submit">Мы свяжимся с вами в ближйшее время</div>
+                    <div className="success-submit">Ми зв'яжемося з вами найближчим часом</div>
                 ) : (
                     <div className="form-container">
+                        <div className="navigation">
+                            <DialButton />
+                        </div>
+
                         <div className="form-container-item">
-                            <span>Имя</span>
+                            <span>Ім'я</span>
                             <div>
                                 <input type="text" name="name" onChange={handleInputs} />
                             </div>
@@ -85,31 +93,32 @@ const Contacts: FC = () => {
                             <div>
                                 <input type="text" name="phone" onChange={handleInputs} />
                                 {!state.phone && error && (
-                                    <span className="error">Введите телефон</span>
+                                    <span className="error">Введіть телефон</span>
                                 )}
                             </div>
                         </div>
                         <div className="form-container-item">
-                            <span>Адрес выполнения работы</span>
+                            <span>Адреса виконання роботи</span>
                             <div>
                                 <input type="text" name="location" onChange={handleInputs} />
                             </div>
                         </div>
                         <div className="form-container-item">
-                            <span>Небольшое описание работы</span>
+                            <span>Невеликий опис роботи</span>
                             <div>
                                 <textarea name="comments" onChange={handleInputs} />
                             </div>
                         </div>
                         <div className="form-button">
                             <button className="contact-form-buttons" onClick={submitData}>
-                                Отправить
+                                Відправити
                             </button>
                         </div>
                     </div>
                 )}
                 <div></div>
-            </div>
+            </ContactsWrapper>
+            <Footer />
         </>
     );
 };

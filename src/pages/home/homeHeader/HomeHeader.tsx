@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './HomeHeader.styles.ts';
 
 import DialButton from '../dialButton/DialButton';
-import { HomeHeaderContainer } from './HomeHeader.styles';
+import { HomeHeaderContainer, MobileTitle } from './HomeHeader.styles';
 import Header from '../../../components/header/Header';
 const HomeHeader: React.FC = () => {
     useEffect(() => {
@@ -33,6 +33,9 @@ const HomeHeader: React.FC = () => {
                         <DialButton />
                     </div>
                 </div>
+                <MobileTitle>
+                    <h2>Ландшафтний дизайн - прості рішення від Frankie Design</h2>
+                </MobileTitle>
             </HomeHeaderContainer>
         </div>
     );

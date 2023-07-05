@@ -1,5 +1,10 @@
-.contacts-wrapper {
-  background-image: url(../../assets//images/leaf.webp),
+import { styled } from "styled-components";
+import leaf from "../../assets/images/leaf.webp";
+import { mainBackground, textColor } from "../../common/colors";
+
+export const ContactsWrapper = styled('div')`
+background-color: ${mainBackground};
+background-image: url(${leaf}),
     linear-gradient(
       107deg,
       rgba(31, 31, 35, 0.76) 0%,
@@ -14,17 +19,22 @@
   justify-content: center;
   border-bottom: 4px solid #f5f6f7;
   height: 100%;
+  
   .contact-container {
     padding-top: 100px;
     margin-right: 60px;
-    @media screen and(max-width: 920px) {
-      margin: 10px;
+    @media(max-width: 920px) {
+      margin: 20px;
+      padding-top: 40px;
     }
     .description {
       line-height: 1.6em;
       font-size: 24px;
       margin: 24px 10px;
-      @media screen and(max-width: 920px) {
+      a {
+        color: white;
+      }
+      @media(max-width: 920px) {
         margin: 24px 0;
       }
     }
@@ -58,7 +68,7 @@
             text-decoration: underline;
             display: flex;
             justify-content: flex-start;
-            @media screen and(max-width: 375px) {
+            @media(max-width: 375px) {
                 font-size: 18px;
             }
         }
@@ -68,9 +78,9 @@
   .form-container {
     padding: 0 100px;
     margin-top: 100px;
-    @media screen and(max-width: 920px) {
+    @media(max-width: 920px) {
       padding: 10px;
-      margin: 40px 0;
+      margin: 40px 20px;
     }
     .form-container-item {
       gap: 20px;
@@ -79,6 +89,11 @@
       margin-bottom: 20px;
       align-items: center;
       position: relative;
+      font-family: "Proxima Nova";
+      span {
+          font-size: 18px;
+          color: ${textColor};
+      }
       .error {
         position: absolute;
         color: red;
@@ -161,9 +176,27 @@
         }
       }
     }
+    .navigation {
+        margin-bottom: 150px;
+        main {
+            --col-height: 10vh;
+            --radius: clamp(1vw, 80px, 10vw);
+            ul {
+                li {
+                    span {
+                        font-size: 12px
+                    }
+                }
+            }
+        }
+        main > div {
+            background: unset;
+            padding: 0;
+        }
+    }
   }
-  @media screen and(max-width:920px) {
+  @media(max-width:920px) {
     display: block;
     padding: 40px 0;
   }
-}
+`

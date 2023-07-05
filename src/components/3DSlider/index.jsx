@@ -45,6 +45,7 @@ class Carousel extends Component {
                     this.Carousel = Carousel;
                 }}
                 className="carousel"
+                id="works"
             >
                 {this.renderThis()}
             </div>

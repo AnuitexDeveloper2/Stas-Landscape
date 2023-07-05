@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import { mainBackground } from '../../../common/colors';
-
+import bg from '../../../assets/images/back.jpg'
 export const HomeHeaderContainer = styled('div')`
     height: 100vh;
     background-color: #24211f;
-    background-image: url(//gardenpark.com.ua/wp-content/themes/gardenpark/css/../img/start-video.jpg);
+    background-image: url(${bg});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,6 +21,9 @@ export const HomeHeaderContainer = styled('div')`
     -ms-flex-pack: justify;
     justify-content: space-between;
     z-index: 30;
+    @media (max-width: 800px) {
+        background-image:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(${bg});
+    }
     .home-header-clip {
         width: 50%;
         background: 0 0;
@@ -48,3 +50,16 @@ export const HomeHeaderContainer = styled('div')`
         }
     }
 `;
+
+export const MobileTitle = styled('div')`
+    display: none;
+      @media (max-width: 800px) {
+             height: 0;
+            display: flex;
+    }
+    position: absolute;
+    top: 50%;
+    justify-content: center;
+    color: white;
+    text-align: center;
+`

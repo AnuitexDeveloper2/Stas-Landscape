@@ -8,8 +8,21 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import Carousel from '../../components/3DSlider';
 import Footer from '../../components/footer/Footer';
 import { HomeBodyTitle, HomePageContainer } from './Home.styles';
+import { useLocation } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    useEffect(() => {
+        const path = params.get('path');
+        console.log(path);
+
+        if (path) {
+            document.getElementById(path)?.scrollIntoView({
+                behavior: 'smooth',
+            });
+        }
+    }, []);
     return (
         <HomePageContainer>
             <HomeHeader />

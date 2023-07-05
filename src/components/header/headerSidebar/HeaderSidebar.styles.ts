@@ -55,19 +55,20 @@ export const HeaderSidebarContainer = styled('div')`
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 200;
         .burgermenu {
             border: none;
             background: none;
             width: 35px;
             height: 45px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
             margin-top: -25px;
             padding: 0;
             opacity: 0.5;
             transition: opacity 0.5s ease;
             outline: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
             &:hover {
                 opacity: 1
             }
@@ -111,6 +112,9 @@ export const HeaderSidebarContainer = styled('div')`
                 }
             }
             &.opened {
+                position: fixed;
+                top: unset;
+                left: unset;
                 span {
                     border-color: transparent;
                     transition: border-color 0.3s ease;
@@ -131,5 +135,3 @@ export const HeaderSidebarContainer = styled('div')`
         }
     }
 `;
-
-export const SidebarMenu = styled('div')``

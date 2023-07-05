@@ -1,19 +1,20 @@
 import React from 'react';
-import './index.scss';
+import './Sidebar.styles.ts';
 import tel from '../../assets/images/tel.svg';
 import tikTok from '../../assets/images/tiktok.svg';
 import insta from '../../assets/images/instagram.svg';
 import { NavLink } from 'react-router-dom';
+import { SidebarContainer } from './Sidebar.styles';
 
 const Sidebar: React.FC = () => {
     return (
-        <div className="sidebar-container" id="sidebar">
+        <SidebarContainer id="sidebar">
             <div className="sidebar-content">
                 <a href="tel:+380660175450">
                     <img src={tel} alt="telephone" width={30} />
                 </a>
-                <NavLink to={'/'} className="make-order-link">
-                    зробити заказ
+                <NavLink to={'/contact-us'} className="make-order-link">
+                    зробити замовлення
                 </NavLink>
                 <div className="socials">
                     <a
@@ -23,14 +24,14 @@ const Sidebar: React.FC = () => {
                         <img src={insta} alt="instagram" />
                     </a>
                     <a
-                        href="https://instagram.com/frankiedesing13?igshid=Y2IzZGU1MTFhOQ=="
+                        href="https://www.tiktok.com/@frankiedesing13?_t=8di47TuFCuT&_r=1"
                         target="_blank"
                     >
                         <img src={tikTok} alt="instagram" />
                     </a>
                 </div>
             </div>
-        </div>
+        </SidebarContainer>
     );
 };
 

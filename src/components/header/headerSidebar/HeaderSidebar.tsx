@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { HeaderSidebarContainer, SidebarMenu } from './HeaderSidebar.styles';
+import { HeaderSidebarContainer } from './HeaderSidebar.styles';
 
-const HeaderSidebar: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+interface Props {
+    isOpen: boolean;
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const HeaderSidebar: React.FC<Props> = ({ isOpen, setIsOpen }) => {
     return (
         <HeaderSidebarContainer>
             <div className="menu-container">
@@ -13,7 +17,6 @@ const HeaderSidebar: React.FC = () => {
                     <span></span>
                 </button>
             </div>
-            <SidebarMenu className={`${isOpen ? 'hide' : ''}`}>Sidebar</SidebarMenu>
         </HeaderSidebarContainer>
     );
 };

@@ -40,6 +40,9 @@ export const HomeBodyTitle = styled('div')`
         font-size: 46px;
         line-height: 58px;
         margin: 0;
+        @media (max-width: 800px) {
+        display: none;
+    }
     }
     @media (max-width: 800px) {
         padding: 50px 0;

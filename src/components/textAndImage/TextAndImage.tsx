@@ -26,7 +26,7 @@ const TextAndImage: React.FC<Props> = ({ items }) => {
     }, [items]);
 
     return (
-        <div ref={divElement}>
+        <div ref={divElement} id="services">
             {items.map((item, i) => (
                 <div className="container" key={i}>
                     <div className={`info ${item.ImageSide === ImageSide.LEFT ? 'reverse' : ''}`}>

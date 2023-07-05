@@ -1,8 +1,34 @@
-.sidebar-container {
+import styled, {keyframes} from 'styled-components'
+import { mainBackground } from '../../common/colors'
+
+const moveToLeft = keyframes`
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }`
+
+const moveToRight = keyframes`
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+`
+
+export const SidebarContainer = styled('div')`
   display: flex;
   width: 80px;
   height: 100vh;
-  background: #f8f8f8;
+  background: ${mainBackground};
   position: fixed;
   right: 0;
   top: 0;
@@ -17,16 +43,15 @@
   &.visible {
     opacity: 1;
     animation-duration: 1s;
-    animation-name: moveToLeft;
+    animation-name: ${moveToLeft};
   }
   &.hide {
     animation-duration: 1s;
-    animation-name: moveToRight;
+    animation-name: ${moveToRight};
   }
-  @media screen and(max-width: 800px) {
+  @media(max-width: 800px) {
     display: none;
   }
-}
 
 .sidebar-content {
   display: flex;
@@ -56,27 +81,4 @@
   display: flex;
   flex-direction: column;
 }
-
-@keyframes moveToLeft {
-  0% {
-    transform: translateX(120px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes moveToRight {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateX(120px);
-    opacity: 0;
-  }
-}
+`
