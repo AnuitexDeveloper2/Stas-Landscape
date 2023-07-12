@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
+import { sentEmail } from '../../helper/email';
 import DialButton from '../home/dialButton/DialButton';
 import { ContactsWrapper } from './ContactUs.styles';
-// import { sentEmail } from "../helper/email";
 const Contacts: FC = () => {
     const [successSubmit, setSuccessSubmit] = useState(false);
     const [error, setError] = useState(false);
@@ -27,13 +27,7 @@ const Contacts: FC = () => {
             setError(true);
             return;
         }
-        // sentEmail(
-        //   state.name,
-        //   state.phone,
-        //   state.email,
-        //   state.comments,
-        //   state.location
-        // );
+        sentEmail(state.name, state.phone, state.email, state.comments, state.location);
         setSuccessSubmit(true);
     };
 
@@ -58,11 +52,11 @@ const Contacts: FC = () => {
                             <div className="description">
                                 <a
                                     className="phone-section"
-                                    href="mailto: oakhousekharkiv@gmail.com"
+                                    href="mailto: Frankiedesing13@gmail.com"
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    oakhousekharkiv@gmail.com
+                                    Frankiedesing13@gmail.com
                                 </a>
                             </div>
                         </div>
