@@ -2,7 +2,7 @@ import { ImageSide, TextAndImageItem } from '../../models/TextAndImage';
 import landscape from '../../assets/images/project.jpg';
 import tree from '../../assets/images/tree.jpg';
 import roll from '../../assets/images/roll.jpg';
-import fellows from '../../assets/images/fellows.jpg';
+import poll from '../../assets/images/poll.jpg';
 import grass from '../../assets/images/grass.jpg';
 
 export const getTextAndImageItems = (): Array<TextAndImageItem> => {
@@ -29,8 +29,8 @@ export const getTextAndImageItems = (): Array<TextAndImageItem> => {
             text: 'Рулонний газон є одним із головних елементів саду, він необхідний, щоб Ваш сад став повноцінним. Наша команда завжди готова допомогти Вам з вибором та укладанням рулонного газону в короткі терміни.',
         },
         {
-            img: fellows,
-            alt: 'fellows',
+            img: poll,
+            alt: 'poll',
             ImageSide: ImageSide.RIGHT,
             title: 'Обслуговування та догляд за ділянками',
             text: "Бездоганність ділянки полягає в її професійному та регулярному догляді. Ми подбаємо про красу та здоров'я Вашого саду.",
