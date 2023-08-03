@@ -55,6 +55,9 @@ background-image: url(${leaf}),
         padding-bottom: 35px !important;
         padding-left: 41px !important;
         margin-bottom: 15px !important;
+        @media(max-width: 500px) {
+        padding: 12px !important;
+      }
         .title {
           line-height: 0.8em;
           margin: 15px 10px;
@@ -68,8 +71,11 @@ background-image: url(${leaf}),
             text-decoration: underline;
             display: flex;
             justify-content: flex-start;
-            @media(max-width: 375px) {
+            @media(max-width: 425px) {
                 font-size: 18px;
+            }
+            @media(max-width: 350px) {
+                font-size: 14px;
             }
         }
       }
