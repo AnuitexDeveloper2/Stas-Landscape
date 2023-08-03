@@ -22,6 +22,10 @@ export const HomePageContainer = styled('div')`
         @media (max-width: 800px) {
             padding-bottom: 100px;
         }
+
+        @media (max-width: 500px) {
+            padding-bottom: 0px;
+        }
         h2 {
             font-family: 'Proxima Nova';
             font-weight: 300;

@@ -1,5 +1,13 @@
 .carousel-item {
-  width: 400px !important;
-  img {
-  }
+    width: 400px !important;
+    height: 400px !important;
+    @media (max-width: 425px) {
+        width: 200px !important;
+    }
+    img {
+    }
+}
+
+.carousel {
+    overflow: visible !important;
 }
